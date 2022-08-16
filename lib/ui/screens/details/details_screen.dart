@@ -9,7 +9,7 @@ class DetailsScreen extends StatelessWidget {
     List<Object> parameters =
         ModalRoute.of<Object?>(context)!.settings.arguments as List<Object>;
     return Scaffold(
-      body: BodyDetails(indexCoffee: parameters[0] as int),
+      body: BodyDetails(coffee: parameters[0] as int),
     );
   }
 }

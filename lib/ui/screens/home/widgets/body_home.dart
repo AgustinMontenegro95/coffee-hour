@@ -1,4 +1,6 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:coffee_hour/data/constants.dart';
+
 import 'package:coffee_hour/ui/widgets/background.dart';
 import 'package:coffee_hour/ui/widgets/powered_by.dart';
 
@@ -12,18 +14,6 @@ class BodyHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> titles = [
-      "Latte",
-      "Negro",
-      "Moka",
-      "Capuchino",
-      "1",
-      "2",
-      "1",
-      "2",
-      "1",
-      "2",
-    ];
     return Stack(
       children: [
         const Background(),
@@ -36,7 +26,7 @@ class BodyHome extends StatelessWidget {
                     return GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/details',
-                              arguments: [index + 1]);
+                              arguments: [index]);
                         },
                         child:
                             Image.asset('assets/images/cafe${index + 1}.png'));
@@ -48,7 +38,7 @@ class BodyHome extends StatelessWidget {
                           SwiperCustomPagination(builder: ((context, config) {
                         return FadeInRight(
                           child: Text(
-                            titles[config.activeIndex],
+                            coffesList[config.activeIndex].name,
                             style: TextStyle(
                                 fontSize: 50,
                                 fontFamily: "Coffee-Tea",

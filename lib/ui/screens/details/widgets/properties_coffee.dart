@@ -3,12 +3,13 @@ import 'package:coffee_hour/ui/screens/details/widgets/features_row.dart';
 
 import 'package:flutter/material.dart';
 
-class PropertiesCoffee extends StatelessWidget {
-  const PropertiesCoffee({
-    Key? key,
-  }) : super(key: key);
+import '../../../../data/constants.dart';
 
-  @override
+class PropertiesCoffee extends StatelessWidget {
+  final int coffee;
+
+  const PropertiesCoffee({super.key, required this.coffee});
+
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -18,7 +19,7 @@ class PropertiesCoffee extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
             child: Text(
-              "Capuchino",
+              coffesList[coffee].name,
               style: TextStyle(
                 fontFamily: "Coffee-Tea",
                 fontSize: 50,
@@ -34,7 +35,7 @@ class PropertiesCoffee extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Flexible(
               child: Text(
-                "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
+                coffesList[coffee].description,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   height: 1,

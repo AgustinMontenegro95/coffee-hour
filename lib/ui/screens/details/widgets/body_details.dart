@@ -3,9 +3,9 @@ import 'package:coffee_hour/ui/screens/details/widgets/properties_coffee.dart';
 import 'package:flutter/material.dart';
 
 class BodyDetails extends StatelessWidget {
-  final int indexCoffee;
+  final int coffee;
 
-  const BodyDetails({super.key, required this.indexCoffee});
+  const BodyDetails({super.key, required this.coffee});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,9 @@ class BodyDetails extends StatelessWidget {
                           topRight: Radius.circular(30),
                         ),
                       ),
-                      child: const PropertiesCoffee(),
+                      child: PropertiesCoffee(
+                        coffee: coffee,
+                      ),
                     ),
                   ],
                 ),
@@ -54,7 +56,7 @@ class BodyDetails extends StatelessWidget {
                         color: Colors.transparent,
                         borderRadius: BorderRadius.circular(200)),
                     child: Image.asset(
-                      'assets/images/cafe$indexCoffee.png',
+                      'assets/images/cafe${coffee + 1}.png',
                       height: 170,
                     ),
                   ),
