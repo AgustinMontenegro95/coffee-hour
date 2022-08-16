@@ -1,4 +1,5 @@
-import 'package:animate_do/animate_do.dart';
+import 'package:coffee_hour/screens/details/widgets/custom_appbar.dart';
+import 'package:coffee_hour/screens/details/widgets/properties_coffee.dart';
 import 'package:flutter/material.dart';
 
 class BodyDetails extends StatelessWidget {
@@ -22,7 +23,7 @@ class BodyDetails extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.15,
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * 0.8,
+                      //height: MediaQuery.of(context).size.height * 0.8,
                       width: double.infinity,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
@@ -58,152 +59,9 @@ class BodyDetails extends StatelessWidget {
                     ),
                   ),
                 ),
+                const CustomAppBar(),
               ],
             ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class PropertiesCoffee extends StatelessWidget {
-  const PropertiesCoffee({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  //height: 50,
-                  //width: 50,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Center(
-                    child: Text(
-                      "Fuerte",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Coffee-Tea",
-                          fontSize: 40),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      //color: Colors.w,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(width: 1, color: Colors.black)),
-                  child: Center(
-                    child: Text(
-                      "36º",
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Coffee-Tea",
-                          fontSize: 40),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          FadeInDown(
-            child: const Padding(
-              padding: EdgeInsets.only(top: 50),
-              child: Text(
-                "Capuchino",
-                style: TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 50,
-                ),
-              ),
-            ),
-          ),
-          FadeInLeft(
-            child: Row(
-              children: [
-                RotatedBox(
-                  quarterTurns: -1,
-                  child: Text(
-                    "Descripcion:".toLowerCase(),
-                    style: const TextStyle(
-                      fontFamily: "Coffee-Tea",
-                      fontSize: 30,
-                    ),
-                  ),
-                ),
-                const Flexible(
-                  child: Text(
-                    "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                      fontFamily: "Coffee-Tea",
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Column(
-            children: [
-              Text(
-                "Ingredientes:".toLowerCase(),
-                style: const TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 30,
-                ),
-              ),
-              Text(
-                "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 30),
-          Row(
-            children: [
-              const Flexible(
-                child: Text(
-                  "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontFamily: "Coffee-Tea",
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-              RotatedBox(
-                quarterTurns: 1,
-                child: Text(
-                  "Pasos:".toLowerCase(),
-                  style: const TextStyle(
-                    fontFamily: "Coffee-Tea",
-                    fontSize: 30,
-                  ),
-                ),
-              ),
-            ],
           ),
         ],
       ),

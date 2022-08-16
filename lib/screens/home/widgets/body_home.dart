@@ -41,32 +41,36 @@ class BodyHome extends StatelessWidget {
                             Image.asset('assets/images/cafe${index + 1}.png'));
                   },
                   pagination: SwiperPagination(
-                      alignment: Alignment.topRight,
-                      margin: EdgeInsets.all(0),
+                      alignment: Alignment.topCenter,
+                      margin: const EdgeInsets.all(10),
                       builder:
                           SwiperCustomPagination(builder: ((context, config) {
-                        return ConstrainedBox(
-                          constraints: BoxConstraints.expand(height: 50),
-                          child: Center(
-                            child: FadeInRight(
-                              child: Text(
-                                "${titles[config.activeIndex]}",
-                                style: TextStyle(
-                                    fontSize: 50, fontFamily: "Coffee-Tea"),
-                              ),
-                            ),
+                        return FadeInRight(
+                          child: Text(
+                            titles[config.activeIndex],
+                            style: TextStyle(
+                                fontSize: 50,
+                                fontFamily: "Coffee-Tea",
+                                color: Colors.brown,
+                                shadows: [
+                                  Shadow(
+                                      color: Colors.brown[800]!,
+                                      blurRadius: 2,
+                                      offset: const Offset(2, 2))
+                                ],
+                                fontWeight: FontWeight.bold),
                           ),
                         );
                       }))),
                   scrollDirection: Axis.vertical,
                   itemCount: 4,
-                  itemWidth: 200,
-                  itemHeight: 500,
+                  itemWidth: MediaQuery.of(context).size.width * 0.7,
+                  itemHeight: MediaQuery.of(context).size.height * 0.7,
                   loop: true,
                   layout: SwiperLayout.STACK,
                 ),
               ),
-              PoweredBy(),
+              const PoweredBy(),
             ],
           ),
         ),

@@ -11,25 +11,23 @@ class PoweredBy extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           Icons.developer_mode_rounded,
-          color: Colors.white,
+          color: Colors.brown[700],
           size: 15,
         ),
-        const Text(
+        Text(
           "Impulsado por: ",
-          style: TextStyle(color: Colors.white, fontSize: 15),
+          style: TextStyle(color: Colors.brown[700], fontSize: 15),
         ),
         SizedBox(
           width: 50,
           height: 50,
           child: GestureDetector(
             onTap: () async {
-              const url = "https://soludevs.web.app/";
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw "Could not launch $url";
+              final Uri url = Uri.parse('https://soludevs.web.app/');
+              if (!await launchUrl(url)) {
+                throw 'Could not launch $url';
               }
             },
             child: const Image(
