@@ -1,4 +1,4 @@
-import 'package:coffee_hour/screens/home/widgets/body_home.dart';
+import 'package:coffee_hour/ui/screens/home/widgets/body_home.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:coffee_hour/widgets/background.dart';
-import 'package:coffee_hour/widgets/powered_by.dart';
+import 'package:coffee_hour/ui/widgets/background.dart';
+import 'package:coffee_hour/ui/widgets/powered_by.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 

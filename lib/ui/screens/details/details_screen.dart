@@ -1,4 +1,4 @@
-import 'package:coffee_hour/screens/details/widgets/body_details.dart';
+import 'package:coffee_hour/ui/screens/details/widgets/body_details.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {

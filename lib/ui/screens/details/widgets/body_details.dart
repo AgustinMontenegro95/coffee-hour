@@ -1,5 +1,5 @@
-import 'package:coffee_hour/screens/details/widgets/custom_appbar.dart';
-import 'package:coffee_hour/screens/details/widgets/properties_coffee.dart';
+import 'package:coffee_hour/ui/screens/details/widgets/custom_appbar.dart';
+import 'package:coffee_hour/ui/screens/details/widgets/properties_coffee.dart';
 import 'package:flutter/material.dart';
 
 class BodyDetails extends StatelessWidget {

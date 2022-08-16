@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:coffee_hour/screens/details/widgets/features_row.dart';
+import 'package:coffee_hour/ui/screens/details/widgets/features_row.dart';
+
 import 'package:flutter/material.dart';
 
 class PropertiesCoffee extends StatelessWidget {
