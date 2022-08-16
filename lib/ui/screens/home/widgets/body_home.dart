@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:coffee_hour/data/constants.dart';
+import 'package:coffee_hour/data/coffee_list.dart';
 
 import 'package:coffee_hour/ui/widgets/background.dart';
 import 'package:coffee_hour/ui/widgets/powered_by.dart';

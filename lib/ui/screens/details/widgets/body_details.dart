@@ -61,7 +61,7 @@ class BodyDetails extends StatelessWidget {
                     ),
                   ),
                 ),
-                const CustomAppBar(),
+                CustomAppBar(coffee: coffee),
               ],
             ),
           ),

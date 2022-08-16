@@ -6,6 +6,7 @@ part of 'coffe_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+// ignore: non_constant_identifier_names
 _$_CoffeClass _$$_CoffeClassFromJson(Map<String, dynamic> json) =>
     _$_CoffeClass(
       name: json['name'] as String,
@@ -18,6 +19,7 @@ _$_CoffeClass _$$_CoffeClassFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
+// ignore: non_constant_identifier_names
 Map<String, dynamic> _$$_CoffeClassToJson(_$_CoffeClass instance) =>
     <String, dynamic>{
       'name': instance.name,

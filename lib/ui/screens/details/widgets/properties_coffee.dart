@@ -3,18 +3,19 @@ import 'package:coffee_hour/ui/screens/details/widgets/features_row.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../../../data/constants.dart';
+import '../../../../data/coffee_list.dart';
 
 class PropertiesCoffee extends StatelessWidget {
   final int coffee;
 
   const PropertiesCoffee({super.key, required this.coffee});
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const FeaturesRow(),
+        FeaturesRow(coffee: coffee),
         FadeInDown(
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
@@ -32,12 +33,12 @@ class PropertiesCoffee extends StatelessWidget {
         ),
         FadeInLeft(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Flexible(
               child: Text(
                 coffesList[coffee].description,
                 textAlign: TextAlign.justify,
-                style: TextStyle(
+                style: const TextStyle(
                   height: 1,
                   fontFamily: "Coffee-Tea",
                   fontSize: 25,

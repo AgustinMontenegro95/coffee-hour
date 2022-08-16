@@ -1,9 +1,10 @@
+import 'package:coffee_hour/data/coffee_list.dart';
 import 'package:flutter/material.dart';
 
 class FeaturesRow extends StatelessWidget {
-  const FeaturesRow({
-    Key? key,
-  }) : super(key: key);
+  final int coffee;
+
+  const FeaturesRow({super.key, required this.coffee});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +19,17 @@ class FeaturesRow extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                    color: Colors.red, borderRadius: BorderRadius.circular(10)),
-                child: const Center(
+                    color: coffesList[coffee].intensity == "S"
+                        ? Colors.blue
+                        : coffesList[coffee].intensity == "M"
+                            ? Colors.orange
+                            : Colors.red, //"F"
+                    borderRadius: BorderRadius.circular(10)),
+                child: Center(
                   child: Text(
-                    "F",
+                    coffesList[coffee].intensity,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 40),
@@ -59,12 +65,12 @@ class FeaturesRow extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 2, color: Colors.black)),
-                child: const Padding(
-                  padding: EdgeInsets.all(2),
+                child: Padding(
+                  padding: const EdgeInsets.all(2),
                   child: Text(
-                    "36º",
+                    coffesList[coffee].temp,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
                         fontSize: 40),

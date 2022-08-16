@@ -1,7 +1,7 @@
 import 'models/coffe_model.dart';
 
-List<CoffeClass> coffesList = [
-  const CoffeClass(
+List<CoffeClass> coffesList = const [
+  CoffeClass(
       name: "Café Batido",
       description:
           "No necesita una máquina elegante para crear su propia experiencia de café.Prepare su propio café batido en casa con el café instantáneo de manera facil",
@@ -19,7 +19,7 @@ List<CoffeClass> coffesList = [
         "2 cucharadas de azúcar granulada",
         "1 taza de leche o agua"
       ]),
-  const CoffeClass(
+  CoffeClass(
       name: "Frappé Latte Macchiato",
       description:
           "Helado. Cremoso. Y sumamente delicioso. Un placer helado y apetitoso que te refrescará y dará energía en cualquier momento durante el verano.",
@@ -35,7 +35,7 @@ List<CoffeClass> coffesList = [
         "1/4 cucharadita de canela en polvo",
         "Cubos de hielo",
       ]),
-  const CoffeClass(
+  CoffeClass(
       name: "Café Helado de Vainilla",
       description:
           "Este café helado de vainilla es perfecto despúes de la cena durante una noche calurosa de verano.",
@@ -55,7 +55,7 @@ List<CoffeClass> coffesList = [
         "Cubitos de hielo",
         "3/4 partes de leche",
       ]),
-  const CoffeClass(
+  CoffeClass(
       name: "Café bombón ",
       description:
           "Café bombón con chocolate y espuma de leche ideal para postre",
@@ -73,7 +73,7 @@ List<CoffeClass> coffesList = [
         "25 g de Chocolate Negro",
         "2 cucharadas de cafe instantaneo",
       ]),
-  const CoffeClass(
+  CoffeClass(
       name: "Cafe Filtro",
       description: "Un clasico,aromático y lleno de sabor.",
       intensity: "F",
