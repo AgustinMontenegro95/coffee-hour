@@ -20,13 +20,14 @@ List<CoffeClass> coffesList = const [
         "1 taza de leche o agua",
       ]),
   CoffeClass(
-      name: "Frappé Latte Macchiato",
+      name: "Café Helado de Vainilla",
       description:
           "Helado. Cremoso. Y sumamente delicioso. Un placer helado y apetitoso que te refrescará y dará energía en cualquier momento durante el verano.",
       intensity: "S",
       temp: "30°",
       steps: [
-        "Simplemente combine el agua, la crema en polvo Coffee mate, el café, el azúcar y la canela en una jarro mediano; mezda bien. Sirve sobre hielo.",
+        "Combine el agua, la crema en polvo Coffee mate, el café, el azúcar y la canela en una jarro mediano y mezda bien",
+        "Sirve sobre un vaso con hielo.",
       ],
       ingredients: [
         "4 tazas de agua caliente",
@@ -36,7 +37,7 @@ List<CoffeClass> coffesList = const [
         "Cubos de hielo",
       ]),
   CoffeClass(
-      name: "Café Helado de Vainilla",
+      name: "Frappé Latte Macchiato",
       description:
           "Este café helado de vainilla es perfecto despúes de la cena durante una noche calurosa de verano.",
       intensity: "S",
@@ -56,7 +57,7 @@ List<CoffeClass> coffesList = const [
         "3/4 partes de leche",
       ]),
   CoffeClass(
-      name: "Café bombón ",
+      name: "Café bombón",
       description:
           "Café bombón con chocolate y espuma de leche ideal para postre",
       intensity: "S",

@@ -28,8 +28,8 @@ class BodyHome extends StatelessWidget {
                           Navigator.pushNamed(context, '/details',
                               arguments: [index]);
                         },
-                        child:
-                            Image.asset('assets/images/cafe${index + 1}.png'));
+                        child: Image.asset(
+                            'assets/images/${coffesList[index].name}.png'));
                   },
                   pagination: SwiperPagination(
                       alignment: Alignment.topCenter,

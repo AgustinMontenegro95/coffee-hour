@@ -34,15 +34,13 @@ class PropertiesCoffee extends StatelessWidget {
         FadeInLeft(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Flexible(
-              child: Text(
-                coffesList[coffee].description,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                  height: 1,
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 25,
-                ),
+            child: Text(
+              coffesList[coffee].description,
+              textAlign: TextAlign.justify,
+              style: const TextStyle(
+                height: 1,
+                fontFamily: "Coffee-Tea",
+                fontSize: 25,
               ),
             ),
           ),

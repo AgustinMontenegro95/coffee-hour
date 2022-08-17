@@ -1,3 +1,4 @@
+import 'package:coffee_hour/data/coffee_list.dart';
 import 'package:coffee_hour/ui/screens/details/widgets/custom_appbar.dart';
 import 'package:coffee_hour/ui/screens/details/widgets/properties_coffee.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,16 @@ class BodyDetails extends StatelessWidget {
     return SingleChildScrollView(
       child: Stack(
         children: [
-          Image.asset(
-            'assets/images/background-coffee.png',
+          Container(
+            height: 300,
+            alignment: Alignment.topCenter,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage(
+                'assets/images/background-coffee.png',
+              ),
+              fit: BoxFit.cover,
+            )),
           ),
           SafeArea(
             child: Stack(
@@ -58,8 +67,7 @@ class BodyDetails extends StatelessWidget {
                         color: Colors.transparent,
                         borderRadius: BorderRadius.circular(200)),
                     child: Image.asset(
-                      'assets/images/cafe${coffee + 1}.png',
-                      height: 170,
+                      'assets/images/${coffesList[coffee].name}.png',
                     ),
                   ),
                 ),
