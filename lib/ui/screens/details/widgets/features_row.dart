@@ -53,7 +53,7 @@ class FeaturesRow extends StatelessWidget {
               const RotatedBox(
                 quarterTurns: -1,
                 child: Text(
-                  "Ideal ",
+                  "Ideal",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.black,
