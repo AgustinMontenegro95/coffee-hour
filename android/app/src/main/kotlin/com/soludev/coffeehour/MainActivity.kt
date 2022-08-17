@@ -1,4 +1,4 @@
-package com.example.coffee_hour
+package com.soludev.coffeehour
 
 import io.flutter.embedding.android.FlutterActivity
 

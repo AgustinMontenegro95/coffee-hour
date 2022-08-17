@@ -1,6 +1,5 @@
+import 'package:coffee_hour/data/coffee_list.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../data/constants.dart';
 
 class FeaturesRow extends StatelessWidget {
   final int coffee;
@@ -20,9 +19,12 @@ class FeaturesRow extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                    color: coffesList[coffee].intensity == 'F'
-                        ? Colors.red
-                        : Colors.blue,
+                    color: coffesList[coffee].intensity == "S"
+                        ? Colors.blue
+                        : coffesList[coffee].intensity == "M"
+                            ? Colors.orange
+                            : Colors.red, //"F"
+
                     borderRadius: BorderRadius.circular(10)),
                 child: Center(
                   child: Text(

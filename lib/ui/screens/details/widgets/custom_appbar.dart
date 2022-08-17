@@ -1,10 +1,11 @@
+import 'package:coffee_hour/data/coffee_list.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    Key? key,
-  }) : super(key: key);
+  final int coffee;
+
+  const CustomAppBar({super.key, required this.coffee});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,8 @@ class CustomAppBar extends StatelessWidget {
               color: Colors.white, borderRadius: BorderRadius.circular(30)),
           child: IconButton(
               onPressed: () {
-                Share.share('check out my website https://example.com');
+                Share.share(
+                    'Haz tu mismo el ${coffesList[coffee].name}. Encontra más información descargando la aplicación Coffee hour en: https://play.google.com/store/apps/details?id=com.soludev.coffeehour');
               },
               icon: const Icon(
                 Icons.share,
