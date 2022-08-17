@@ -12,7 +12,9 @@ class BodyDetails extends StatelessWidget {
     return SingleChildScrollView(
       child: Stack(
         children: [
-          Image.asset('assets/images/background-coffee.png'),
+          Image.asset(
+            'assets/images/background-coffee.png',
+          ),
           SafeArea(
             child: Stack(
               children: [

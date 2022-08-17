@@ -17,7 +17,7 @@ List<CoffeClass> coffesList = [
       ingredients: [
         "2 cucharadas de café instantáneo",
         "2 cucharadas de azúcar granulada",
-        "1 taza de leche o agua"
+        "1 taza de leche o agua",
       ]),
   const CoffeClass(
       name: "Frappé Latte Macchiato",

@@ -54,7 +54,7 @@ class BodyHome extends StatelessWidget {
                         );
                       }))),
                   scrollDirection: Axis.vertical,
-                  itemCount: 4,
+                  itemCount: 5,
                   itemWidth: MediaQuery.of(context).size.width * 0.7,
                   itemHeight: MediaQuery.of(context).size.height * 0.7,
                   loop: true,

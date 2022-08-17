@@ -10,11 +10,14 @@ class PropertiesCoffee extends StatelessWidget {
 
   const PropertiesCoffee({super.key, required this.coffee});
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const FeaturesRow(),
+        FeaturesRow(
+          coffee: coffee,
+        ),
         FadeInDown(
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
@@ -32,16 +35,14 @@ class PropertiesCoffee extends StatelessWidget {
         ),
         FadeInLeft(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Flexible(
-              child: Text(
-                coffesList[coffee].description,
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  height: 1,
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 25,
-                ),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              coffesList[coffee].description,
+              textAlign: TextAlign.justify,
+              style: const TextStyle(
+                height: 1,
+                fontFamily: "Coffee-Tea",
+                fontSize: 25,
               ),
             ),
           ),
@@ -59,40 +60,62 @@ class PropertiesCoffee extends StatelessWidget {
                   fontSize: 30,
                 ),
               ),
-              const Text(
-                "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 20,
-                ),
-              ),
+              ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: coffesList[coffee].ingredients.length,
+                  itemBuilder: (context, i) {
+                    return Center(
+                      child: Text(
+                        coffesList[coffee].ingredients[i],
+                        textAlign: TextAlign.justify,
+                        style: const TextStyle(
+                          fontFamily: "Coffee-Tea",
+                          fontSize: 20,
+                        ),
+                      ),
+                    );
+                  }),
             ],
           ),
         ),
         const SizedBox(height: 30),
-        Row(
+        Column(
           children: [
-            const Flexible(
-              child: Text(
-                "El café es la bebida que se obtiene a partir de los granos tostados y molidos de los frutos de la planta del café (cafeto); es altamente estimulante por su contenido de cafeína,​ una sustancia psicoactiva.",
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 20,
-                ),
+            Text(
+              "Pasos:".toLowerCase(),
+              style: const TextStyle(
+                fontFamily: "Coffee-Tea",
+                fontSize: 30,
               ),
             ),
-            RotatedBox(
-              quarterTurns: 1,
-              child: Text(
-                "Pasos:".toLowerCase(),
-                style: const TextStyle(
-                  fontFamily: "Coffee-Tea",
-                  fontSize: 30,
-                ),
-              ),
-            ),
+            ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: coffesList[coffee].steps.length,
+                itemBuilder: (context, i) {
+                  return Row(
+                    children: [
+                      Text(
+                        "Paso ${i + 1}:  ",
+                        style: const TextStyle(
+                          fontFamily: "Coffee-Tea",
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Flexible(
+                        child: Text(
+                          coffesList[coffee].steps[i],
+                          style: const TextStyle(
+                            fontFamily: "Coffee-Tea",
+                            fontSize: 25,
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }),
           ],
         ),
       ],
