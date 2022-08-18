@@ -7,16 +7,33 @@ import 'package:coffee_hour/ui/widgets/powered_by.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 
-class BodyHome extends StatelessWidget {
+class BodyHome extends StatefulWidget {
   const BodyHome({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<BodyHome> createState() => _BodyHomeState();
+}
+
+class _BodyHomeState extends State<BodyHome> {
+  bool isSwitched = false;
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         const Background(),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Switch(
+            value: isSwitched,
+            onChanged: (value) {
+              setState(() {
+                isSwitched = value;
+              });
+            },
+          ),
+        ),
         SafeArea(
           child: Column(
             children: [
