@@ -65,8 +65,11 @@ class BodyDetails extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.circular(200)),
-                    child: Image.asset(
-                      'assets/images/${coffesList[coffee].name}.png',
+                    child: Hero(
+                      tag: "imagen$coffee",
+                      child: Image.asset(
+                        'assets/images/${coffesList[coffee].name}.png',
+                      ),
                     ),
                   ),
                 ),

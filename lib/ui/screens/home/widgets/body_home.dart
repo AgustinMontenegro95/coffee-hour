@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:coffee_hour/data/coffee_list.dart';
+import 'dart:math' as math;
 
 import 'package:coffee_hour/ui/widgets/background.dart';
 import 'package:coffee_hour/ui/widgets/powered_by.dart';
@@ -45,8 +46,26 @@ class _BodyHomeState extends State<BodyHome> {
                           Navigator.pushNamed(context, '/details',
                               arguments: [index]);
                         },
-                        child: Image.asset(
-                            'assets/images/${coffesList[index].name}.png'));
+                        child: Hero(
+                          flightShuttleBuilder: (flightContext, animation,
+                              flightDirection, fromHeroContext, toHeroContext) {
+                            final Hero toHero = toHeroContext.widget as Hero;
+                            return ScaleTransition(
+                              scale: animation.drive(
+                                Tween<double>(begin: 0.0, end: 1.0).chain(
+                                  CurveTween(
+                                    curve: Interval(0.0, 1.0,
+                                        curve: PeakQuadraticCurve()),
+                                  ),
+                                ),
+                              ),
+                              child: toHero.child,
+                            );
+                          },
+                          tag: "imagen$index",
+                          child: Image.asset(
+                              'assets/images/${coffesList[index].name}.png'),
+                        ));
                   },
                   pagination: SwiperPagination(
                       alignment: Alignment.topCenter,
@@ -84,5 +103,13 @@ class _BodyHomeState extends State<BodyHome> {
         ),
       ],
     );
+  }
+}
+
+class PeakQuadraticCurve extends Curve {
+  @override
+  double transform(double t) {
+    assert(t >= 0.0 && t <= 1.0);
+    return -15 * math.pow(t, 2) + 15 * t + 1;
   }
 }
