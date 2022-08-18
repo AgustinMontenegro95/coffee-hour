@@ -34,7 +34,6 @@ class BodyDetails extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.15,
                     ),
                     Container(
-                      //height: MediaQuery.of(context).size.height * 0.8,
                       width: double.infinity,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
