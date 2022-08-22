@@ -134,7 +134,7 @@ class PropertiesCoffee extends StatelessWidget {
                         ),
                       );
                     }),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.115),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               ],
             ),
           ],

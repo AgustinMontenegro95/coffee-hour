@@ -14,6 +14,11 @@ class BodyDetails extends StatelessWidget {
       child: Stack(
         children: [
           Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            color: const Color.fromARGB(255, 255, 231, 201),
+          ),
+          Container(
             height: 300,
             alignment: Alignment.topCenter,
             decoration: const BoxDecoration(
