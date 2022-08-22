@@ -20,7 +20,7 @@ class BodyHome extends StatefulWidget {
 }
 
 class _BodyHomeState extends State<BodyHome> {
-  bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Stack(
