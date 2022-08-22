@@ -68,7 +68,7 @@ class BodyDetails extends StatelessWidget {
                     child: Hero(
                       tag: "imagen$coffee",
                       child: Image.asset(
-                        'assets/images/${coffesList[coffee].name}.png',
+                        'assets/images/${coffesListSp[coffee].name}.png',
                       ),
                     ),
                   ),

@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:coffee_hour/data/coffee_list.dart';
+import 'package:coffee_hour/domain/blocks/cubit/languages_cubit.dart';
 import 'dart:math' as math;
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:coffee_hour/ui/widgets/background.dart';
 import 'package:coffee_hour/ui/widgets/powered_by.dart';
@@ -24,16 +26,20 @@ class _BodyHomeState extends State<BodyHome> {
     return Stack(
       children: [
         const Background(),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Switch(
-            value: isSwitched,
-            onChanged: (value) {
-              setState(() {
-                isSwitched = value;
-              });
-            },
-          ),
+        BlocBuilder<LanguagesCubit, LanguagesState>(
+          builder: (context, state) {
+            return Align(
+              alignment: Alignment.bottomRight,
+              child: Switch(
+                activeThumbImage: const AssetImage('assets/spain.png'),
+                inactiveThumbImage: const AssetImage('assets/england.png'),
+                value: state.isSpain,
+                onChanged: (value) {
+                  context.read<LanguagesCubit>().toggleSwitch(value);
+                },
+              ),
+            );
+          },
         ),
         SafeArea(
           child: Column(
@@ -64,7 +70,7 @@ class _BodyHomeState extends State<BodyHome> {
                           },
                           tag: "imagen$index",
                           child: Image.asset(
-                              'assets/images/${coffesList[index].name}.png'),
+                              'assets/images/${coffesListSp[index].name}.png'),
                         ));
                   },
                   pagination: SwiperPagination(
@@ -73,19 +79,25 @@ class _BodyHomeState extends State<BodyHome> {
                       builder:
                           SwiperCustomPagination(builder: ((context, config) {
                         return FadeInRight(
-                          child: Text(
-                            coffesList[config.activeIndex].name,
-                            style: TextStyle(
-                                fontSize: 50,
-                                fontFamily: "Coffee-Tea",
-                                color: Colors.brown,
-                                shadows: [
-                                  Shadow(
-                                      color: Colors.brown[800]!,
-                                      blurRadius: 2,
-                                      offset: const Offset(2, 2))
-                                ],
-                                fontWeight: FontWeight.bold),
+                          child: BlocBuilder<LanguagesCubit, LanguagesState>(
+                            builder: (context, state) {
+                              return Text(
+                                state.isSpain
+                                    ? coffesListSp[config.activeIndex].name
+                                    : coffesListEn[config.activeIndex].name,
+                                style: TextStyle(
+                                    fontSize: 50,
+                                    fontFamily: "Coffee-Tea",
+                                    color: Colors.brown,
+                                    shadows: [
+                                      Shadow(
+                                          color: Colors.brown[800]!,
+                                          blurRadius: 2,
+                                          offset: const Offset(2, 2))
+                                    ],
+                                    fontWeight: FontWeight.bold),
+                              );
+                            },
                           ),
                         );
                       }))),

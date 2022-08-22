@@ -32,7 +32,7 @@ class CustomAppBar extends StatelessWidget {
           child: IconButton(
               onPressed: () {
                 Share.share(
-                    'Haz tu mismo el ${coffesList[coffee].name}. Encontra más información descargando la aplicación Coffee hour en: https://play.google.com/store/apps/details?id=com.soludev.coffeehour');
+                    'Haz tu mismo el ${coffesListSp[coffee].name}. Encontra más información descargando la aplicación Coffee hour en: https://play.google.com/store/apps/details?id=com.soludev.coffeehour');
               },
               icon: const Icon(
                 Icons.share,
