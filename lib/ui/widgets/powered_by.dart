@@ -11,15 +11,6 @@ class PoweredBy extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
-          Icons.developer_mode_rounded,
-          color: Colors.brown[700],
-          size: 15,
-        ),
-        Text(
-          "Impulsado por: ",
-          style: TextStyle(color: Colors.brown[700], fontSize: 15),
-        ),
         SizedBox(
           width: 50,
           height: 50,

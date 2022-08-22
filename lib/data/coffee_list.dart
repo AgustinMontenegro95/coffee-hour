@@ -4,12 +4,12 @@ List<CoffeClass> coffesListSp = const [
   CoffeClass(
       name: "Café Batido",
       description:
-          "No necesita una máquina elegante para crear su propia experiencia de café.Prepare su propio café batido en casa con el café instantáneo de manera facil",
+          "No necesita una máquina elegante para crear su propia experiencia de café. Prepare su propio café batido en casa con el café instantáneo de manera facil.",
       intensity: "S",
       temp: "25°",
       steps: [
         "Agregue café instantáneo, azúcar y agua caliente a un recipiente limpio.",
-        "Con una batidora de mano, bata / bate los ingredientes durante aproximadamente 2-5 minutos, hasta que la mezcla cambie de espumosa a espumosa a cremosa",
+        "Con una batidora de mano, bata / bate los ingredientes durante aproximadamente 2-5 minutos, hasta que la mezcla cambie de espumosa a espumosa a cremosa.",
         "Llena un vaso con hielo y agrega la leche.",
         "Coloque con una cuchara el café batido encima. (También puede colocarlo sobre leche tibia para una bebida caliente).",
         "¡Revuélvelo en la leche para combinar y disfrutar!"
@@ -22,11 +22,11 @@ List<CoffeClass> coffesListSp = const [
   CoffeClass(
       name: "Café Helado de Vainilla",
       description:
-          "Helado. Cremoso. Y sumamente delicioso. Un placer helado y apetitoso que te refrescará y dará energía en cualquier momento durante el verano.",
+          "Helado, cremoso y sumamente delicioso. Un placer helado y apetitoso que te refrescará y dará energía en cualquier momento durante el verano.",
       intensity: "S",
       temp: "30°",
       steps: [
-        "Combine el agua, la crema en polvo Coffee mate, el café, el azúcar y la canela en una jarro mediano y mezda bien",
+        "Combine el agua, la crema en polvo Coffee mate, el café, el azúcar y la canela en una jarro mediano y mezda bien.",
         "Sirve sobre un vaso con hielo.",
       ],
       ingredients: [
@@ -59,13 +59,13 @@ List<CoffeClass> coffesListSp = const [
   CoffeClass(
       name: "Café bombón",
       description:
-          "Café bombón con chocolate y espuma de leche ideal para postre",
+          "Café bombón con chocolate y espuma de leche ideal para postre.",
       intensity: "S",
       temp: "20°",
       steps: [
-        "Fundir el chocolate en el microondas o al baño maría. ",
-        "Preparar el batido de cafe con un poco de agua y azucar",
-        "Verter la leche condensada en el vaso, añadir el chocolate fundido formando una segunda capa. ",
+        "Fundir el chocolate en el microondas o al baño maría.",
+        "Preparar el batido de cafe con un poco de agua y azucar.",
+        "Verter la leche condensada en el vaso, añadir el chocolate fundido formando una segunda capa.",
         "Añadir el café y encima la espuma de leche al gusto.",
       ],
       ingredients: [
@@ -76,12 +76,12 @@ List<CoffeClass> coffesListSp = const [
       ]),
   CoffeClass(
       name: "Cafe Filtro",
-      description: "Un clasico,aromático y lleno de sabor.",
+      description: "Un clasico, aromático y lleno de sabor.",
       intensity: "F",
       temp: "20°",
       steps: [
-        "Calentar agua caliente en una jarra y agregar una cucharada (10 gramos) de cafe cada dos tazas de agua) ",
-        "Filtrar en una taza una vez que el agua este en ebullición ",
+        "Calentar agua caliente en una jarra y agregar una cucharada (10 gramos) de cafe cada dos tazas de agua).",
+        "Filtrar en una taza una vez que el agua este en ebullición.",
       ],
       ingredients: [
         "Agua caliente",
@@ -93,12 +93,12 @@ List<CoffeClass> coffesListEn = const [
   CoffeClass(
       name: "Coffee Shake",
       description:
-          "You don't need a fancy machine to create your own coffee experience. Make your own whipped coffee at home with instant coffee the easy way",
+          "You don't need a fancy machine to create your own coffee experience. Make your own whipped coffee at home with instant coffee the easy way.",
       intensity: "S",
       temp: "25°",
       steps: [
         "Add instant coffee, sugar and hot water to a clean container.",
-        "Using a hand mixer, whisk/whip the ingredients for about 2-5 minutes, until the mixture changes from frothy to frothy to creamy",
+        "Using a hand mixer, whisk/whip the ingredients for about 2-5 minutes, until the mixture changes from frothy to frothy to creamy.",
         "Fill a glass with ice and add the milk.",
         "Spoon the whipped coffee on top. (You can also spoon it over warm milk for a hot drink).",
         "Stir it into the milk to combine and enjoy!"
@@ -148,13 +148,13 @@ List<CoffeClass> coffesListEn = const [
   CoffeClass(
       name: "Coffee bonbon",
       description:
-          "Coffee bonbon with chocolate and milk foam ideal for dessert",
+          "Coffee bonbon with chocolate and milk foam ideal for dessert.",
       intensity: "S",
       temp: "20°",
       steps: [
         "Melt the chocolate in the microwave or in a bain-marie. ",
-        "Prepare the coffee shake with a little water and sugar",
-        "Pour the condensed milk into the glass, add the melted chocolate forming a second layer. ",
+        "Prepare the coffee shake with a little water and sugar.",
+        "Pour the condensed milk into the glass, add the melted chocolate forming a second layer.",
         "Add the coffee and on top the milk foam to taste.",
       ],
       ingredients: [
@@ -169,8 +169,8 @@ List<CoffeClass> coffesListEn = const [
       intensity: "F",
       temp: "20°",
       steps: [
-        "Heat hot water in a jug and add a tablespoon (10 grams) of coffee every two cups of water) ",
-        "Filter into a cup once the water is boiling",
+        "Heat hot water in a jug and add a tablespoon (10 grams) of coffee every two cups of water).",
+        "Filter into a cup once the water is boiling.",
       ],
       ingredients: [
         "Hot water",

@@ -80,6 +80,7 @@ class PropertiesCoffee extends StatelessWidget {
                             style: const TextStyle(
                               fontFamily: "Coffee-Tea",
                               fontSize: 20,
+                              height: 1.5,
                             ),
                           ),
                         );
@@ -102,33 +103,38 @@ class PropertiesCoffee extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: coffesListSp[coffee].steps.length,
                     itemBuilder: (context, i) {
-                      return Row(
-                        children: [
-                          Text(
-                            state.isSpain
-                                ? "Paso ${i + 1}:  "
-                                : "Step ${i + 1}:  ",
-                            style: const TextStyle(
-                              fontFamily: "Coffee-Tea",
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Flexible(
-                            child: Text(
+                      return Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Row(
+                          children: [
+                            Text(
                               state.isSpain
-                                  ? coffesListSp[coffee].steps[i]
-                                  : coffesListEn[coffee].steps[i],
+                                  ? "Paso ${i + 1}:  "
+                                  : "Step ${i + 1}:  ",
                               style: const TextStyle(
                                 fontFamily: "Coffee-Tea",
-                                fontSize: 25,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.justify,
+                            ),
+                            Flexible(
+                              child: Text(
+                                state.isSpain
+                                    ? coffesListSp[coffee].steps[i]
+                                    : coffesListEn[coffee].steps[i],
+                                style: const TextStyle(
+                                    fontFamily: "Coffee-Tea",
+                                    fontSize: 25,
+                                    height: 1),
+                                textAlign: TextAlign.justify,
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       );
                     }),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.115),
               ],
             ),
           ],
