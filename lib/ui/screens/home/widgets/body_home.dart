@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:coffee_hour/data/coffee_list.dart';
 import 'package:coffee_hour/domain/blocks/cubit/languages_cubit.dart';
 import 'dart:math' as math;
@@ -20,7 +21,6 @@ class BodyHome extends StatefulWidget {
 }
 
 class _BodyHomeState extends State<BodyHome> {
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -81,7 +81,7 @@ class _BodyHomeState extends State<BodyHome> {
                         return FadeInRight(
                           child: BlocBuilder<LanguagesCubit, LanguagesState>(
                             builder: (context, state) {
-                              return Text(
+                              return AutoSizeText(
                                 state.isSpain
                                     ? coffesListSp[config.activeIndex].name
                                     : coffesListEn[config.activeIndex].name,
@@ -96,6 +96,7 @@ class _BodyHomeState extends State<BodyHome> {
                                           offset: const Offset(2, 2))
                                     ],
                                     fontWeight: FontWeight.bold),
+                                maxLines: 2,
                               );
                             },
                           ),

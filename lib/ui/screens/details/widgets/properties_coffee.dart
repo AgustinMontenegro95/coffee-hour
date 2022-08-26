@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:coffee_hour/ui/screens/details/widgets/features_row.dart';
 
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class PropertiesCoffee extends StatelessWidget {
             FadeInLeft(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Text(
+                child: AutoSizeText(
                   state.isSpain
                       ? coffesListSp[coffee].description
                       : coffesListEn[coffee].description,
@@ -50,6 +51,7 @@ class PropertiesCoffee extends StatelessWidget {
                     fontFamily: "Coffee-Tea",
                     fontSize: 25,
                   ),
+                  maxLines: 2,
                 ),
               ),
             ),

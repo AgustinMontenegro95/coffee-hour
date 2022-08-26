@@ -27,6 +27,7 @@ dependencies:
   bloc: ^8.1.0
   flutter_bloc: ^8.1.1
   path_provider: ^2.0.11
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   freezed: ^2.1.0+1
